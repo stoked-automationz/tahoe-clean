@@ -17,9 +17,9 @@ export default function HeroSection() {
         <Image
           src="/images/logo.png"
           alt="Tahoe Clean"
-          width={192}
-          height={128}
-          className="h-24 md:h-32 w-auto mx-auto mb-10 drop-shadow-2xl"
+          width={450}
+          height={300}
+          className="h-40 md:h-56 lg:h-64 w-auto mx-auto mb-10 drop-shadow-2xl"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
           Life&apos;s too short to clean,{" "}
