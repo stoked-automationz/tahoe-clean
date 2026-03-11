@@ -21,8 +21,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50">
       {/* Announcement bar */}
-      <div className="bg-primary text-primary-foreground text-center py-1.5 text-sm tracking-wide">
-        residential – commercial – vacation rentals
+      <div className="bg-primary text-primary-foreground text-center py-1.5 text-sm tracking-wide uppercase">
+        RESIDENTIAL – COMMERCIAL – VACATION RENTALS
       </div>
       {/* Main nav */}
       <nav className="bg-white shadow-sm">
