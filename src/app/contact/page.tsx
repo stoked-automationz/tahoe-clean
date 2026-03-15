@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, MapPin, Clock } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Tahoe Clean | 775-600-7437",
   description:
     "Contact Tahoe Clean for a free consultation. Serving South Lake Tahoe and the surrounding area. Call 775-600-7437.",
 };
@@ -44,9 +45,29 @@ const contactCards = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://tahoe-clean.vercel.app",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Contact",
+      item: "https://tahoe-clean.vercel.app/contact",
+    },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <>
+      <StructuredData schemas={[breadcrumbSchema]} />
       <PageHeader
         title="Contact Us"
         subtitle="Ready for a spotless home? Give us a call."

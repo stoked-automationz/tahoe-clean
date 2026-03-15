@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Mail } from "lucide-react";
 
 const quickLinks = [
   { href: "/", label: "Home" },
@@ -8,6 +8,7 @@ const quickLinks = [
   { href: "/services", label: "Services" },
   { href: "/faqs", label: "FAQs" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" },
 ];
 
 const serviceLinks = [
@@ -16,6 +17,14 @@ const serviceLinks = [
   "Handyman Services",
   "Deep Cleaning",
   "Snow Removal",
+];
+
+// TODO: Update social URLs when real profiles are created
+const socialLinks = [
+  { label: "Google Reviews", href: "#" },
+  { label: "Yelp", href: "#" },
+  { label: "Facebook", href: "#" },
+  { label: "Instagram", href: "#" },
 ];
 
 export default function Footer() {
@@ -59,6 +68,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
+              {/* TODO: Link to /services/${slug} when individual service pages exist */}
               {serviceLinks.map((service) => (
                 <li key={service}>
                   <Link
@@ -83,9 +93,35 @@ export default function Footer() {
                 <Phone className="h-4 w-4" />
                 775-600-7437
               </Link>
+              {/* TODO: Confirm email address */}
+              <Link
+                href="mailto:info@tahoeclean.com"
+                className="flex items-center gap-2 text-sm hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                info@tahoeclean.com
+              </Link>
               <div className="flex items-center gap-2 text-sm">
                 <MapPin className="h-4 w-4" />
                 South Lake Tahoe, CA
+              </div>
+            </div>
+
+            {/* TODO: Update social URLs when real profiles are created */}
+            <div className="mt-4">
+              <h5 className="text-white text-sm font-semibold mb-2">
+                Follow Us
+              </h5>
+              <div className="flex flex-wrap gap-3">
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    className="text-sm hover:text-white transition-colors"
+                  >
+                    {social.label}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

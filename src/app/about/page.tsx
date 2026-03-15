@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ShieldCheck, GraduationCap, Award, Shield } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import CTABanner from "@/components/CTABanner";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — South Lake Tahoe Cleaning Company",
   description:
     "Learn about Tahoe Clean — founded by Kyle Leake, committed to delivering exceptional cleaning services to the Lake Tahoe community with honesty, reliability, and attention to detail.",
 };
@@ -36,9 +38,29 @@ const trustItems = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://tahoe-clean.vercel.app",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About Us",
+      item: "https://tahoe-clean.vercel.app/about",
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <StructuredData schemas={[breadcrumbSchema]} />
       <PageHeader
         title="About Tahoe Clean"
         subtitle="Committed to protecting your family and business — one cleaning at a time."
@@ -50,7 +72,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold mb-8">Our Story</h2>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Founded by Kyle Leake, Tahoe Clean was built on a simple promise:
+              Tahoe Clean was built on a simple promise:
               to deliver exceptional cleaning services to the Lake Tahoe
               community with honesty, reliability, and attention to detail. We
               understand that your home or vacation rental is one of your most
@@ -65,7 +87,21 @@ export default function AboutPage() {
             <p>
               We do a whole lot more than just clean. From handyman services to
               snow removal, hot-tub maintenance to lawn care, we&apos;re your
-              one-stop solution for property management in South Lake Tahoe.
+              one-stop solution for property management in South Lake Tahoe.{" "}
+              <Link
+                href="/services"
+                className="text-primary font-medium hover:underline"
+              >
+                See our full list of services
+              </Link>{" "}
+              or{" "}
+              <Link
+                href="/contact"
+                className="text-primary font-medium hover:underline"
+              >
+                contact us
+              </Link>{" "}
+              for a free consultation.
             </p>
           </div>
         </div>

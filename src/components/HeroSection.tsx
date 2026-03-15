@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
       <Image
         src="/images/hero-tahoe.jpg"
-        alt="Lake Tahoe"
+        alt="Professional cleaning services in South Lake Tahoe"
         fill
         className="object-cover"
         priority
@@ -22,11 +22,11 @@ export default function HeroSection() {
           className="h-52 md:h-56 lg:h-64 w-auto mx-auto mb-10 drop-shadow-2xl"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-          Life&apos;s too short to clean,{" "}
-          <em className="text-accent not-italic" style={{ fontStyle: "italic" }}>
-            that&apos;s why we are here!
-          </em>
+          Cleaning Services in South Lake Tahoe
         </h1>
+        <p className="text-xl md:text-2xl text-accent italic mb-2">
+          Life&apos;s too short to clean — that&apos;s why we are here!
+        </p>
         <p className="text-white/80 text-lg md:text-xl mb-8">
           Premium vacation home & residential cleaning services at Lake Tahoe.
         </p>

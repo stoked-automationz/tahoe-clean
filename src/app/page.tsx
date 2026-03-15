@@ -46,7 +46,13 @@ export default function Home() {
             have to worry about the condition of your home or if your guests are
             cared for. From same-day turnovers to hot-tub maintenance, snow
             removal, and handyman repairs — we&apos;re your complete property
-            care solution.
+            care solution.{" "}
+            <Link
+              href="/about"
+              className="text-primary font-medium hover:underline"
+            >
+              Learn more about us &rarr;
+            </Link>
           </p>
         </div>
       </section>
