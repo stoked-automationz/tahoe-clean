@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[750px] md:h-[700px] flex items-center justify-center overflow-hidden">
       <Image
         src="/images/hero-tahoe.jpg"
         alt="Professional cleaning services in South Lake Tahoe"
@@ -13,13 +13,13 @@ export default function HeroSection() {
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/50 to-foreground/80" />
-      <div className="relative z-10 text-center px-4 max-w-3xl">
+      <div className="relative z-10 text-center px-4 pt-16 md:pt-0 max-w-3xl">
         <Image
           src="/images/logo.png"
           alt="Tahoe Clean"
           width={450}
           height={300}
-          className="h-52 md:h-56 lg:h-64 w-auto mx-auto mb-10 drop-shadow-2xl"
+          className="h-40 md:h-56 lg:h-64 w-auto mx-auto mb-6 md:mb-10 drop-shadow-2xl"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
           Cleaning Services in South Lake Tahoe

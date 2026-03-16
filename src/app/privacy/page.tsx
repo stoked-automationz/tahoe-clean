@@ -37,7 +37,7 @@ export default function PrivacyPage() {
       />
 
       <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 max-w-3xl prose prose-neutral">
+        <div className="container mx-auto px-4 max-w-3xl space-y-6 text-muted-foreground leading-relaxed [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mt-8 [&_h2]:mb-3 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2">
           {/* TODO: Have a legal professional review and finalize this privacy policy */}
           <p className="text-sm text-muted-foreground mb-8">
             Last updated: March 2026
