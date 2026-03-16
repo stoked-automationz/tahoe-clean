@@ -19,7 +19,7 @@ export default function HeroSection() {
           alt="Tahoe Clean"
           width={450}
           height={300}
-          className="h-48 md:h-56 lg:h-64 w-auto mx-auto mb-6 md:mb-10 drop-shadow-2xl"
+          className="h-64 md:h-56 lg:h-64 w-auto mx-auto mb-3 md:mb-10 drop-shadow-2xl"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
           Cleaning Services in South Lake Tahoe
